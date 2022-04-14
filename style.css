@@ -16,6 +16,11 @@ h1, h2, h3, h4, h5, h6 {
     margin: 0;
 }
 
+/* Page */
+.page {
+    overflow: hidden;
+}
+
 /* Container */
 .container {
     width: 100%;
@@ -117,8 +122,8 @@ h1, h2, h3, h4, h5, h6 {
 
 .link_text:hover {
     color: #fce38a;
-    text-decoration: underline;
-}
+    text-decoration: underline; 
+} 
 
 /*Slider */
 .slider {
@@ -256,6 +261,8 @@ h1, h2, h3, h4, h5, h6 {
 .section_img {
     background: linear-gradient(to bottom, #f38181,#fbe389 );
     transition: transform .3s linear;
+    max-width: 100%;
+    
 }
 
 .section_img img {
@@ -704,6 +711,7 @@ hr {
 /* Blog */
 .blog {
     display: flex;
+    flex-wrap: wrap;
     justify-content: space-between;
 }
 
@@ -818,6 +826,7 @@ footer {
 
 .footer_inner {
     display: flex;
+    flex-wrap: wrap;
     justify-content: space-between;
     padding-bottom: 65px;
 }
@@ -1149,6 +1158,22 @@ footer {
         width: 100%;
         padding-right: 0;
     }
+
+    /* Footer */
+    .footer_col--first {
+        width: 100%;
+    }
+
+    .footer_col--second,
+    .footer_col--third {
+        width: 50%;
+    }
+
+    .instagram_item {
+        justify-content: flex-start;
+        width: 32.33%;
+        margin-bottom: 10px;
+    }
 }
 
 @media (max-width: 767px) {
@@ -1245,7 +1270,17 @@ footer {
         width: 50%;
     }
 
+    /* Blog */
+    .blog_item {
+        margin: 0 auto;
+        width: 100%;
+        max-width: 380px;
+        margin-bottom: 30px;
+    }
 
+    .blog_item:last-child {
+        margin-bottom: 0;
+    }
 }
 
 @media (max-width: 575px) {
@@ -1270,12 +1305,13 @@ footer {
     /* Devices */
     .device_item {
         max-width: 320px;
+        margin: 0 auto;
     }
 
     .device_item--iphone {
-        max-width: 200px;
+        max-width: 175px;
         bottom: -65px;
-        right: 130px;
+        right: 80px;
     }
 
     /* Reviews */
@@ -1316,6 +1352,15 @@ footer {
     .clients_text:before {
         margin: 20px auto;
     }
+
+    .footer_col--second,
+    .footer_col--third {
+        width: 100%;
+    }
+
+    .instagram_item {
+        border: 0;
+    } 
 }
 
 @media (max-width: 320px) {
@@ -1340,4 +1385,31 @@ footer {
     .clients_item:last-child {
         margin-bottom: 5px;
     }
+
+
+    /* Devices */
+    .device_item {
+        max-width: 250px;
+        margin: 0 auto;
+    }
+
+    .device_item--iphone {
+        max-width: 145px;
+        bottom: -65px;
+        right: 0px;
+    }
+
+    /* Services */
+    .services_item {
+        width: 100%;
+    }
+
+    .section_img img {
+        max-width: 50%;
+    }
+
+    .section_team_text {
+        left: 0;
+    }
+
 }
